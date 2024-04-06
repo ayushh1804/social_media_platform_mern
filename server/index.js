@@ -8,9 +8,9 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { authRoutes } from "./routes/auth.js";
+import authRoutes  from "./routes/auth.js";
 import {createPost} from "./controllers/post.js";
-import { userRoutes } from "./routes/user.js";
+import  userRoutes  from "./routes/users.js";
 import { register } from "./controllers/auth.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -53,9 +53,6 @@ app.use("/users", userRoutes);
 //Mongoose setup
 
 mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-
 }).then(() => {
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);

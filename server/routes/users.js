@@ -1,8 +1,8 @@
 import express from 'express';
 import {
+    addRemoveFriends,
     getUser,
     getUserFriends,
-    addRemoveFriends,
 } from "../controllers/users.js";
 import { verifyToken } from '../middleware/auth.js';
 
