@@ -5,7 +5,7 @@ import Navbar from "./scenes/navbar"
 import ProfilePage from "./scenes/profilePage"
 import { useMemo } from "react";
 import { useSelector } from "react-redux"
-import { cssBaseline, ThemeProvider } from "@mui/material"
+import { CssBaseline, ThemeProvider } from "@mui/material"
 import { createTheme } from "@mui/material/styles"
 import { themeSettings } from "./theme";
 
@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <ThemeProvider theme={theme}>
-          <cssBaseline />
+          <CssBaseline />
           <Navbar />
           <Routes>
             <Route path="/" element={<LoginPage />} />
