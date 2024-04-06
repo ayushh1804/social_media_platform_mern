@@ -9,6 +9,8 @@ import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { authRoutes } from "./routes/auth.js";
+import {createPost} from "./controllers/post.js";
+import { userRoutes } from "./routes/user.js";
 import { register } from "./controllers/auth.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -46,7 +48,7 @@ app.post("/auth/register", upload.single('picture'), register);
 
 //Routes
 app.use("/auth", authRoutes);
-
+app.use("/users", userRoutes);
 
 //Mongoose setup
 
