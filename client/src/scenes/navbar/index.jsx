@@ -1,29 +1,29 @@
-import { useState, React } from "react";
+import {
+  Close,
+  DarkMode,
+  Help,
+  LightMode,
+  Menu,
+  Message,
+  Notifications,
+  Search,
+} from "@mui/icons-material";
 import {
   Box,
+  FormControl,
   IconButton,
   InputBase,
-  Typography,
-  Select,
   MenuItem,
-  FormControl,
-  useTheme,
+  Select,
+  Typography,
   useMediaQuery,
+  useTheme,
 } from "@mui/material";
-import {
-  Search,
-  Message,
-  DarkMode,
-  LightMode,
-  Notifications,
-  Help,
-  Menu,
-  Close,
-} from "@mui/icons-material";
+import { React, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setMode, setLogout } from "../../state";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "../../components/FlexBetween";
+import { setLogout, setMode } from "../../state";
 
 const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
@@ -38,10 +38,7 @@ const Navbar = () => {
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
 
-//   const fullName = `${user.first_name} ${user.last_name}`;
-const first_name = "test1";
-const last_name = "test2";
-const fullName = `${first_name} ${last_name}`;
+    const fullName = `${user.firstName} ${user.lastName}`;
 
 
   return (
