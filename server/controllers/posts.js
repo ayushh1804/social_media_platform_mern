@@ -1,7 +1,7 @@
 import e from 'cors';
 import Post from '../models/Post.js';
 import User from '../models/User.js';
-import { verifyToken } from '../middleware/auth.js';
+// import { verifyToken } from '../middleware/auth.js';
 //crete post
 
 export const createPost = async (req, res) => {

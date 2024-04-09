@@ -6,9 +6,8 @@ import PostWidget from "./PostWidget";
 const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts);
-  const token1 = useSelector((state) => state.token);
-const token = token1
-console.log(token)
+  const token = useSelector((state) => state.token);
+
 
 
   const getPosts = async () => {
