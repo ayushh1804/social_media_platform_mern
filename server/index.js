@@ -8,7 +8,8 @@ import morgan from 'morgan';
 import multer from 'multer';
 import path from 'path';
 import Post from './models/Post.js';
-import { posts } from './data/index.js';
+import User from './models/User.js';
+import { posts,users } from './data/index.js';
 
 import { fileURLToPath } from 'url';
 import { register } from "./controllers/auth.js";
